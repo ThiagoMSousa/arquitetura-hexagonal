@@ -1,5 +1,6 @@
-package br.com.dev.thiagomds.hexagonal.adapters.out.client;
+package br.com.dev.thiagomds.hexagonal.adapters.out;
 
+import br.com.dev.thiagomds.hexagonal.adapters.out.client.FindAddressByZipCodeClient;
 import br.com.dev.thiagomds.hexagonal.adapters.out.client.mapper.AddressResponseMapper;
 import br.com.dev.thiagomds.hexagonal.application.core.domain.Address;
 import br.com.dev.thiagomds.hexagonal.application.ports.out.FindAddressByZipCodeOutputPort;
