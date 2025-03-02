@@ -4,6 +4,7 @@ import br.com.dev.thiagomds.hexagonal.adapters.in.controller.mapper.CustomerMapp
 import br.com.dev.thiagomds.hexagonal.adapters.in.controller.request.CustomerRequest;
 import br.com.dev.thiagomds.hexagonal.adapters.in.controller.response.CustomerResponse;
 import br.com.dev.thiagomds.hexagonal.application.core.domain.Customer;
+import br.com.dev.thiagomds.hexagonal.application.ports.in.DeleteCustomerByIdInputPort;
 import br.com.dev.thiagomds.hexagonal.application.ports.in.FindCustomerByIdInputPort;
 import br.com.dev.thiagomds.hexagonal.application.ports.in.InsertCustomerInputPort;
 import br.com.dev.thiagomds.hexagonal.application.ports.in.UpdateCustomerInputPort;
@@ -29,6 +30,10 @@ public class CustomerController {
     @Autowired
     private UpdateCustomerInputPort updateCustomerInputPort;
 
+    @Autowired
+    private DeleteCustomerByIdInputPort deleteCustomerByIdInputPort;
+
+
     @PostMapping
     public ResponseEntity<Void> insert(@RequestBody CustomerRequest customerRequest) {
         var customer = customerMapper.toCustomer(customerRequest);
@@ -51,7 +56,12 @@ public class CustomerController {
         customer.setId(id);
         updateCustomerInputPort.update(customer, customerRequest.getZipCode());
         return ResponseEntity.noContent().build();
+    }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable final String id) {
+        deleteCustomerByIdInputPort.delete(id);
+        return ResponseEntity.noContent().build();
     }
 
 }
