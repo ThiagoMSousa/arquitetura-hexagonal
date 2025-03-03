@@ -5,7 +5,9 @@ import br.com.dev.thiagomds.hexagonal.adapters.out.repository.mapper.CustomerEnt
 import br.com.dev.thiagomds.hexagonal.application.core.domain.Customer;
 import br.com.dev.thiagomds.hexagonal.application.ports.out.UpdateCustomerOutputPort;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UpdateCustomerAdapter implements UpdateCustomerOutputPort {
 
     @Autowired
