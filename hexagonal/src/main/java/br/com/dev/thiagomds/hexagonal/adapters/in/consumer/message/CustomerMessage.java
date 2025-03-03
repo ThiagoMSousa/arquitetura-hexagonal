@@ -13,6 +13,6 @@ public class CustomerMessage {
     private String name;
     private String zipCode;
     private String cpf;
-    private String isValidCpf;
+    private Boolean isValidCPF;
 
 }

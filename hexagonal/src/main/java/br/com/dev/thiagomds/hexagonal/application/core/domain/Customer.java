@@ -9,7 +9,7 @@ public class Customer {
     private Boolean isValidCPF;
 
     public Customer() {
-        setValidCPF(false);
+        setIsValidCPF(false);
     }
 
     public Customer(String id, String name, Address address, String cpf, Boolean isValidCPF) {
@@ -28,6 +28,6 @@ public class Customer {
     public void setAddress(Address address)   { this.address = address; }
     public String getCpf()                    { return cpf; }
     public void setCpf(String cpf)            { this.cpf = cpf; }
-    public Boolean getValidCPF()              { return isValidCPF; }
-    public void setValidCPF(Boolean validCPF) { isValidCPF = validCPF; }
+    public Boolean getIsValidCPF()              { return isValidCPF; }
+    public void setIsValidCPF(Boolean validCPF) { this.isValidCPF = validCPF; }
 }
