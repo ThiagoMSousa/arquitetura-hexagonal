@@ -180,4 +180,161 @@ public class NamingConventionTest {
             .should()
             .resideInAPackage("..hexagonal.config")
             .as("Config classes should reside inside config package in hexagonal package");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..consumer" tenham
+     * o sufixo "Consumer".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_consumer = classes()
+            .that()
+            .resideInAPackage("..consumer")
+            .should()
+            .haveSimpleNameEndingWith("Consumer");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..mapper" tenham
+     * o sufixo "Mapper" ou "MapperImpl".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_mapper = classes()
+            .that()
+            .resideInAPackage("..mapper")
+            .should()
+            .haveSimpleNameEndingWith("Mapper")
+            .orShould()
+            .haveSimpleNameEndingWith("MapperImpl");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..message" tenham
+     * o sufixo "Message".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_message = classes()
+            .that()
+            .resideInAPackage("..message")
+            .should()
+            .haveSimpleNameEndingWith("Message");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..controller" tenham
+     * o sufixo "Controller".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_controller = classes()
+            .that()
+            .resideInAPackage("..controller")
+            .should()
+            .haveSimpleNameEndingWith("Controller");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..request" tenham
+     * o sufixo "Request".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_request = classes()
+            .that()
+            .resideInAPackage("..request")
+            .should()
+            .haveSimpleNameEndingWith("Request");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..response" tenham
+     * o sufixo "Response".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_response = classes()
+            .that()
+            .resideInAPackage("..response")
+            .should()
+            .haveSimpleNameEndingWith("Response");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..client" tenham
+     * o sufixo "Client".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_client = classes()
+            .that()
+            .resideInAPackage("..client")
+            .should()
+            .haveSimpleNameEndingWith("Client");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..repository" tenham
+     * o sufixo "Repository".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_repository = classes()
+            .that()
+            .resideInAPackage("..repository")
+            .should()
+            .haveSimpleNameEndingWith("Repository");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..entity" tenham
+     * o sufixo "Entity".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_entity = classes()
+            .that()
+            .resideInAPackage("..entity")
+            .should()
+            .haveSimpleNameEndingWith("Entity");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..adapters.out" tenham
+     * o sufixo "Adapter".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_adapter = classes()
+            .that()
+            .resideInAPackage("..adapters.out")
+            .should()
+            .haveSimpleNameEndingWith("Adapter");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..usecase" tenham
+     * o sufixo "UseCase".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_usecase = classes()
+            .that()
+            .resideInAPackage("..usecase")
+            .should()
+            .haveSimpleNameEndingWith("UseCase");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..ports.in" tenham
+     * o sufixo "InputPort".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_input_port = classes()
+            .that()
+            .resideInAPackage("..ports.in")
+            .should()
+            .haveSimpleNameEndingWith("InputPort");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..ports.out" tenham
+     * o sufixo "OutputPort".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_output_port = classes()
+            .that()
+            .resideInAPackage("..ports.out")
+            .should()
+            .haveSimpleNameEndingWith("OutputPort");
+
+    /**
+     * Este teste do ArchUnit garante que as classes no pacote "..config" tenham
+     * o sufixo "Config".
+     */
+    @ArchTest
+    public static final ArchRule should_be_suffixed_config = classes()
+            .that()
+            .resideInAPackage("..config")
+            .should()
+            .haveSimpleNameEndingWith("Config");
+
 }
