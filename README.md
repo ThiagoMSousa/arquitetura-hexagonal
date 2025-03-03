@@ -1,4 +1,10 @@
 # Aplicação de Arquitetura Hexagonal
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.5-brightgreen)
+![Gradle](https://img.shields.io/badge/Gradle-7.5.1-green)
+![MongoDB](https://img.shields.io/badge/MongoDB-4.4.10-green)
+![Docker](https://img.shields.io/badge/Docker-20.10.8-blue)
+![Kafka](https://img.shields.io/badge/Kafka-2.8.0-blue)
 
 Este projeto é uma aplicação Java que segue o padrão de Arquitetura Hexagonal. Utiliza Spring Boot e Gradle para construção e gerenciamento de dependências.
 
